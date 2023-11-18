@@ -7,7 +7,6 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get/get_instance/src/bindings_interface.dart';
 import 'package:get/route_manager.dart';
-
 import 'src/core/app_routes.dart';
 import 'src/l10n/lang.dart';
 
