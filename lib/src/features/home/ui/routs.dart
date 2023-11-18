@@ -6,7 +6,7 @@ import 'bindings/home_binding.dart';
 
 class Routs implements IRouts<HomeScreen, HomeBinding> {
   @override
-  String initial = "/";
+  String initial = "/home";
 
   @override
   List<GetPage>? routes = [

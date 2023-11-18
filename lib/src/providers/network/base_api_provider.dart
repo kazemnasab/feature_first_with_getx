@@ -1,8 +1,7 @@
 import 'package:dio/dio.dart';
 
-abstract class  IApiProvider  {
+abstract class  BaseApiProvider  {
 
-  IApiProvider getIstance({String baseUrl, String token});
 
   Future<dynamic> get(String path, {
     Object? data,
