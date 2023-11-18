@@ -1,23 +1,22 @@
 import 'package:dio/dio.dart';
 
-import 'IApiProvider.dart';
+import 'base_api_provider.dart';
 
-class AxiosProvider implements IApiProvider {
+class DioProvider implements BaseApiProvider {
 
   String baseUrl;
   String? token;
-  AxiosProvider({required this.baseUrl, String? token}){
+  DioProvider({required this.baseUrl, String? token}){
     this.baseUrl=baseUrl;
     this.token=token;
   }
-  static AxiosProvider? _instance = null;
+  static DioProvider? _instance = null;
   final Dio _dio = Dio();
 
-  @override
-  IApiProvider getIstance({String? baseUrl, String? token}) {
+  static BaseApiProvider getIstance({String? baseUrl, String? token}) {
     // TODO: implement getClient
     if(_instance == null)
-      _instance = AxiosProvider(baseUrl: baseUrl!, token: token);
+      _instance = DioProvider(baseUrl: baseUrl!, token: token);
     return _instance!;
   }
 

@@ -11,7 +11,6 @@ abstract class IRouts<T,B>{
   T DefaultPage();
   B DefaultBinding();
 }
-
 List<GetPage>? getPages() {
 
   IRouts home_route = home.Routs();
@@ -31,4 +30,5 @@ List<GetPage>? getPages() {
     ),
   ];
 }
+
 

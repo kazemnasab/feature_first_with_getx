@@ -1,3 +1,4 @@
+import '../../l10n/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -10,7 +11,7 @@ class SettingScreen extends GetView<SettingController> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text(controller.text.value),
+      child: Text("Loading".translate),
     );
   }
 }
