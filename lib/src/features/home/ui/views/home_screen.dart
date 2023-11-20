@@ -1,3 +1,8 @@
+import 'package:feature_first_with_getx/src/features/home/domains/User.dart';
+import 'package:feature_first_with_getx/src/features/shared/layout/bottom.navigation.dart';
+import 'package:feature_first_with_getx/src/features/shared/layout/layout.scafold.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import '../../l10n/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -11,9 +16,29 @@ class HomeScreen extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Obx(() {
+      return LayoutScafold(
+        loading: controller.state.loading.value,
+        appBar: AppBar(title: Text("sdddd")),
+        bottomNavigationBar: CustomBottomNavigation(),
+        body: SingleChildScrollView(
+          child:  ListView.builder(
+              itemCount: controller.state.users.length,
+              itemBuilder: (_, index) {
+
+                print(index);
+                return Text("item.email");
+              }),
+        ),
+      );
+      if (controller.state.loading.value)
+        return FloatingActionButton(onPressed: () {
+          Get.toNamed(Get.currentRoute + "/e");
+        });
+      return FloatingActionButton(onPressed: () {});
       if (controller.state.loading.value) return Text("Loading".translate);
       return Container(
-        child: Text(controller.state.users.value.length.toString()),
+        child: InkWell(
+            child: Text(controller.state.users.value.length.toString())),
       );
     });
   }

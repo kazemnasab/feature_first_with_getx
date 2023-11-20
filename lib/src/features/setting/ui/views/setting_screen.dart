@@ -11,7 +11,7 @@ class SettingScreen extends GetView<SettingController> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("Loading".translate),
+      child: Text("Loading setting".translate),
     );
   }
 }

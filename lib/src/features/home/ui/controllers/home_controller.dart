@@ -9,7 +9,7 @@ class HomeController extends GetxController {
 
   @override
   void onInit() async {
-    await loadUsers();
+    //await loadUsers();
   }
 
   Future<void> loadUsers() async {
