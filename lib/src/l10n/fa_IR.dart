@@ -17,4 +17,6 @@ Map<String, String> keys = {
     "Error":"خطا",
     "Passwords do not match. Please try again.":"رمزهای ورود مطابقت ندارند. لطفا دوباره تلاش کنید.",
     "Title":"عنوان",
+    "Filter":"فیلتر",
+    "Sort":"مرتب سازی",
   };

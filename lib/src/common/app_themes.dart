@@ -4,8 +4,8 @@ class AppThemes {
   AppThemes._();
 
   //Font
-  static String lightFont = "Arimo";
-  static String darkFont = "Arimo";
+  static String lightFont = "tahoma";
+  static String darkFont = "tahoma";
 
   //Primary
   static const Color _lightPrimaryColor = Color(0xffffffff);
@@ -38,12 +38,15 @@ class AppThemes {
     headline3: TextStyle(fontSize: 48.0, color: _lightTextColor),
     headline4: TextStyle(fontSize: 34.0, color: _lightTextColor),
     headline5: TextStyle(fontSize: 24.0, color: _lightTextColor),
-    headline6: TextStyle(fontSize: 20.0, color: _lightTextColor, fontWeight: FontWeight.w500),
+    headline6: TextStyle(
+        fontSize: 20.0, color: _lightTextColor, fontWeight: FontWeight.w500),
     subtitle1: TextStyle(fontSize: 16.0, color: _lightTextColor),
-    subtitle2: TextStyle(fontSize: 14.0, color: _lightTextColor, fontWeight: FontWeight.w500),
+    subtitle2: TextStyle(
+        fontSize: 14.0, color: _lightTextColor, fontWeight: FontWeight.w500),
     bodyText1: TextStyle(fontSize: 16.0, color: _lightTextColor),
     bodyText2: TextStyle(fontSize: 14.0, color: _lightTextColor),
-    button: TextStyle(fontSize: 14.0, color: _lightTextColor, fontWeight: FontWeight.w500),
+    button: TextStyle(
+        fontSize: 14.0, color: _lightTextColor, fontWeight: FontWeight.w500),
     caption: TextStyle(fontSize: 12.0, color: _lightTextColor),
     overline: TextStyle(fontSize: 14.0, color: _lightTextColor),
   );
@@ -54,12 +57,15 @@ class AppThemes {
     headline3: TextStyle(fontSize: 48.0, color: _darkTextColor),
     headline4: TextStyle(fontSize: 34.0, color: _darkTextColor),
     headline5: TextStyle(fontSize: 24.0, color: _darkTextColor),
-    headline6: TextStyle(fontSize: 20.0, color: _darkTextColor, fontWeight: FontWeight.w500),
+    headline6: TextStyle(
+        fontSize: 20.0, color: _darkTextColor, fontWeight: FontWeight.w500),
     subtitle1: TextStyle(fontSize: 16.0, color: _darkTextColor),
-    subtitle2: TextStyle(fontSize: 14.0, color: _darkTextColor, fontWeight: FontWeight.w500),
+    subtitle2: TextStyle(
+        fontSize: 14.0, color: _darkTextColor, fontWeight: FontWeight.w500),
     bodyText1: TextStyle(fontSize: 16.0, color: _darkTextColor),
     bodyText2: TextStyle(fontSize: 14.0, color: _darkTextColor),
-    button: TextStyle(fontSize: 14.0, color: _darkTextColor, fontWeight: FontWeight.w500),
+    button: TextStyle(
+        fontSize: 14.0, color: _darkTextColor, fontWeight: FontWeight.w500),
     caption: TextStyle(fontSize: 12.0, color: _darkTextColor),
     overline: TextStyle(fontSize: 14.0, color: _darkTextColor),
   );
@@ -73,8 +79,9 @@ class AppThemes {
     scaffoldBackgroundColor: _lightBackgroundColor,
     appBarTheme: AppBarTheme(
       color: _lightBackgroundColor,
-      iconTheme: IconThemeData(color: _lightIconColor)
-      , toolbarTextStyle: _lightTextTheme.bodyText2, titleTextStyle: _lightTextTheme.headline6,
+      iconTheme: IconThemeData(color: _lightIconColor),
+      toolbarTextStyle: _lightTextTheme.bodyText2,
+      titleTextStyle: _lightTextTheme.headline6,
     ),
     iconTheme: IconThemeData(
       color: _lightIconColor,
@@ -92,15 +99,27 @@ class AppThemes {
     hintColor: _darkSecondaryColor,
     fontFamily: darkFont,
     scaffoldBackgroundColor: _darkBackgroundColor,
+    primaryColorDark: _darkPrimaryColor,
     appBarTheme: AppBarTheme(
       color: _darkBackgroundColor,
-      iconTheme: IconThemeData(color: _darkIconColor)
-      , toolbarTextStyle: _darkTextTheme.bodyText2, titleTextStyle: _darkTextTheme.headline6,
+      iconTheme: IconThemeData(color: _darkIconColor),
+      toolbarTextStyle: _darkTextTheme.bodyText2,
+      titleTextStyle: _darkTextTheme.headline6,
     ),
+    bottomNavigationBarTheme:
+        BottomNavigationBarThemeData(selectedItemColor: Colors.white),
+    textButtonTheme: TextButtonThemeData(
+        style: ButtonStyle(
+            iconColor: MaterialStateProperty.all(_darkPrimaryColor),
+            foregroundColor: MaterialStateProperty.all(_darkPrimaryColor),
+            textStyle: MaterialStateProperty.all(TextStyle(
+                fontSize: 11,
+                fontWeight: FontWeight.bold,
+                fontFamily: darkFont)))),
     iconTheme: IconThemeData(
       color: _darkIconColor,
     ),
-    textTheme: _darkTextTheme,
+    textTheme: _lightTextTheme,
     dividerTheme: DividerThemeData(
       color: Colors.grey,
     ),

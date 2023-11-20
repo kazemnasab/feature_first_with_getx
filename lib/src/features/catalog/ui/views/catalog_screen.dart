@@ -1,5 +1,4 @@
 import 'package:feature_first_with_getx/src/features/home/domains/User.dart';
-import 'package:feature_first_with_getx/src/features/home/ui/views/_product.filter.dart';
 import 'package:feature_first_with_getx/src/features/shared/layout/bottom.navigation.dart';
 import 'package:feature_first_with_getx/src/features/shared/layout/custom.app.bar.dart';
 import 'package:feature_first_with_getx/src/features/shared/layout/layout.scafold.dart';
@@ -8,13 +7,13 @@ import '../../l10n/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../controllers/home_controller.dart';
-import '_product.item.dart';
+import '../controllers/catalog_controller.dart';
+import '_product_filter.dart';
+import '_product_item.dart';
 
-class HomeScreen extends GetView<HomeController> {
-  static String route = "/home";
-  const HomeScreen({super.key});
-
+class CatalogScreen extends GetView<CatalogController> {
+  static String route = "/catalog";
+  const CatalogScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Obx(() {

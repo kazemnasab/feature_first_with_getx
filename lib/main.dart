@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get/get_instance/src/bindings_interface.dart';
 import 'package:get/route_manager.dart';
+import 'src/common/app_themes.dart';
 import 'src/core/app_routes.dart';
 import 'src/l10n/lang.dart';
 
@@ -17,16 +18,19 @@ void main() {
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   WidgetsFlutterBinding.ensureInitialized();
   runApp(GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      initialRoute: "/home",
-      initialBinding: BindingsBuilder(() {
-        Get.lazyPut<BaseApiProvider>(() => DioProvider.getIstance(baseUrl: "https://reqres.in/api"));
-        Get.lazyPut<ApiGlobalService>(() => ApiGlobalService());
-        Get.lazyPut<StorageService>(() => StorageService());
-      }),
-      getPages: getPages(),
-      translations: Languages(),
-      locale: const Locale('fa', 'IR'),
-      fallbackLocale: const Locale('fa', 'IR')));
+    debugShowCheckedModeBanner: false,
+    initialRoute: "/product",
+    initialBinding: BindingsBuilder(() {
+      Get.lazyPut<BaseApiProvider>(
+          () => DioProvider.getIstance(baseUrl: "https://reqres.in/api"));
+      Get.lazyPut<ApiGlobalService>(() => ApiGlobalService());
+      Get.lazyPut<StorageService>(() => StorageService());
+    }),
+    getPages: getPages(),
+    translations: Languages(),
+    locale: const Locale('fa', 'IR'),
+    fallbackLocale: const Locale('fa', 'IR'),
+    theme: AppThemes.darkTheme,
+  ));
   //runApp(const MyApp());
 }

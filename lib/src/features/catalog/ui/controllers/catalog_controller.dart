@@ -1,14 +1,17 @@
 import 'package:feature_first_with_getx/src/features/home/repositories/user_repository.dart';
 import 'package:get/get.dart';
 
-import '../states/home_state.dart';
+import '../states/catalog_state.dart';
 
-class HomeController extends GetxController {
+class CatalogController extends GetxController {
   IUserRepository repository = Get.find();
-  HomeState state = HomeState();
+  CatalogState state = CatalogState();
 
   @override
   void onInit() async {
+    int productId = Get.parameters['productId'] != null
+        ? int.parse(Get.parameters['productId'].toString())
+        : 0;
     await loadUsers();
   }
 

@@ -14,11 +14,9 @@ class _CustomBottomNavigationState extends State<CustomBottomNavigation> {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-        unselectedItemColor: Colors.black45,
         selectedFontSize: 11,
         selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
         unselectedFontSize: 11,
-        selectedItemColor: Colors.black,
         type: BottomNavigationBarType.fixed,
         currentIndex: 0,
         items: [
