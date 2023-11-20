@@ -9,9 +9,6 @@ class CatalogController extends GetxController {
 
   @override
   void onInit() async {
-    int productId = Get.parameters['productId'] != null
-        ? int.parse(Get.parameters['productId'].toString())
-        : 0;
     await loadUsers();
   }
 

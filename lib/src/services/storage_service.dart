@@ -13,5 +13,4 @@ class StorageService extends GetxService {
   Future<bool> setString(String key, String value) async {
     return await _prefs.setString(key, value);
   }
-
 }

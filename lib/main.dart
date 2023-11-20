@@ -1,6 +1,9 @@
+import 'dart:convert';
+
 import 'package:feature_first_with_getx/src/providers/network/base_api_provider.dart';
 import 'package:feature_first_with_getx/src/providers/network/dio_provider.dart';
 import 'package:feature_first_with_getx/src/services/api_global_service.dart';
+import 'package:feature_first_with_getx/src/services/shopping_cart_service.dart';
 import 'package:feature_first_with_getx/src/services/storage_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -12,6 +15,7 @@ import 'src/core/app_routes.dart';
 import 'src/l10n/lang.dart';
 
 void main() {
+
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]);
@@ -25,6 +29,7 @@ void main() {
           () => DioProvider.getIstance(baseUrl: "https://reqres.in/api"));
       Get.lazyPut<ApiGlobalService>(() => ApiGlobalService());
       Get.lazyPut<StorageService>(() => StorageService());
+      Get.lazyPut<ShoppingCartService>(() => ShoppingCartService());
     }),
     getPages: getPages(),
     translations: Languages(),
