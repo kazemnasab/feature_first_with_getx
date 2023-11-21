@@ -8,6 +8,6 @@ class ProductBinding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut<IUserRepository>(() => UserRepository(Get.find()));
-    Get.lazyPut<ProductController>(() => ProductController());
+    Get.put(ProductController());
   }
 }

@@ -23,7 +23,7 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(GetMaterialApp(
     debugShowCheckedModeBanner: false,
-    initialRoute: "/product",
+    initialRoute: "/catalog",
     initialBinding: BindingsBuilder(() {
       Get.lazyPut<BaseApiProvider>(
           () => DioProvider.getIstance(baseUrl: "https://reqres.in/api"));
